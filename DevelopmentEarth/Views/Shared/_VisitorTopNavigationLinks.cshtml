@@ -1,0 +1,22 @@
+﻿<!-- Static navbar -->
+<div class="navbar navbar-default nav-left" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="@Url.Action("Index", "Home", new { area = "" })">Home</a></li>
+            <li><a href="@Url.Action("AboutUs", "Home", new { area = "" })">About Us</a></li>
+            <li><a href="@Url.Action("Services", "Home", new { area = "" })">Services &amp; Offers</a></li>
+            <li><a href="@Url.Action("Terms", "Home", new { area = "" })">Terms</a></li>
+            <li><a href="@Url.Action("ContactUs", "Home", new { area = "" })">Contact Us</a></li>
+        </ul>
+    </div>
+    <!--/.nav-collapse -->
+</div>

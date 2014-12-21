@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="">
+    <!--[if lte IE 8]>
+<link href="css/ie7-8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <!--[if IE 9]>
+<link href="css/ie9.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+<![endif]-->
+
+    @Styles.Render("~/Content/CSS")
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <div id="body">
+
+
+        <section class="dev_earth">
+
+            <!-------header-start-------->
+            <header class="home_header">
+                <div class="container">
+
+                    <a class="logo" href="#">
+                        <img src="../../Content/Images/logo.png" alt="" /></a>
+                    <button class="sign-in" data-toggle="modal" data-target="#myModal">LOGIN</button>
+                    <button class="sign-in" data-toggle="modal" data-target="#myModal">Register</button>
+                    <!-- Modal-start-->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                    <h3 class="modal-title" id="myModalLabel">LOGIN</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form role="form" class="login">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Employe ID</label>
+                                            <input type="email" placeholder="Enter email" id="exampleInputEmail1" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">User Name</label>
+                                            <input type="email" placeholder="Enter email" id="exampleInputEmail1" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" placeholder="Password" id="exampleInputPassword1" class="form-control">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                                Remember me on this computer
+                                            </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal-end-->
+                    @{Html.RenderPartial("_VisitorTopNavigationLinks");}
+
+                    <!-- Main component for a primary marketing message or call to action -->
+
+
+
+                </div>
+            </header>
+            <!-------header-end-------->
+
+            @RenderBody()
+
+        </section>
+    </div>
+    <footer>
+
+        @{Html.RenderPartial("_VisitorFooterLinks");}
+        @{Html.RenderPartial("_FooterCopyrightContent");}
+
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.min.js"></script>
+
+</body>
+</html>

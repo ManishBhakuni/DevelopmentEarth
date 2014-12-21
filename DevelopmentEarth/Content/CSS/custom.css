@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'league_gothicregular';
+    src: url('../fonts/league_gothic-webfont.eot');
+    src: url('../fonts/league_gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/league_gothic-webfont.woff') format('woff'),
+         url('../fonts/league_gothic-webfont.ttf') format('truetype'),
+         url('../fonts/league_gothic-webfont.svg#league_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+* { margin:0; padding:0; }
+html, body {height: 100%;}
+
+body { margin:0; padding:0; font-family: 'Open Sans', sans-serif; font-size:12px; color:#353535; background:#fff; border-top:4px solid #56509f;}
+input, select, textarea { font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#404040; }
+section, nav, header, footer, figure, article, aside { display:block;}
+h1, h2, h3, h4, h5, h6 { line-height:normal; font-weight:normal; color:#00517b;}
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span{color:#ca1117;}
+h1 { font-size:32px; }
+h2 { font-size:24px; }
+h3 { font-size:18px; }
+h4 { font-size:16px; }
+h5 { font-size:14px; }
+h6 { font-size:12px; }
+ul, ul li { list-style:none }
+img { border:none; vertical-align:middle; }
+a { color:#1f97da; text-decoration:none; outline:none; font-size:14px; }
+a:hover { color:#df821e;}
+input[type=button], input[type=submit] { cursor:pointer; border:none; overflow:visible; }
+input[type=radio], input[type=checkbox] {margin:0 5px 0 0; padding:0; vertical-align:middle; height:13px; width:13px;}
+.clear{clear:both; overflow:hidden; line-height:0; font-size:0;}
+
+.clearfix:after, .container:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.fl-rt{
+	float:right !important;
+	}
+.fl-lt{
+	float:left !important;
+	}
+
+/*==========================================================================
+ **************************** Main Css  ***********************************
+ ==========================================================================*/
+.dev_earth .home_header{border-bottom:#adadad 1px solid;}
+
+.dev_earth .navbar-default{background:none; border:none; margin:0px;}
+.dev_earth .navbar-nav{font-family:league_gothicregular; text-transform:uppercase;}
+.dev_earth .navbar-default .navbar-nav > li > a{font-size:28px; padding-top:5px; padding-bottom:5px; padding-left:0px; padding-right:0px; color:#515151; border-bottom:4px solid #515151;}
+.dev_earth .navbar-nav > li{margin-left:30px;}
+.dev_earth .navbar-default .navbar-nav > .active > a, .dev_earth .navbar-default .navbar-nav > .active > a:hover, .dev_earth .navbar-default .navbar-nav > .active > a:focus{border-bottom:4px solid #4fb8ed; color:#4fb8ed; background:none;}
+.dev_earth .navbar-default .navbar-nav > li > a:hover{color:#4fb8ed; border-bottom:4px solid #4fb8ed;}
+.sign-in{background:#56509f; float:right; color:#fff; padding:8px 25px; text-transform:uppercase; font-weight:normal; border:none; margin-left:3px;}
+.dev_earth .nav-left{ margin-top:100px;}
+.dev_earth .navbar{min-height:auto;}
+a.logo{float:left; margin:30px 0;}
+
+
+/******************footer_start*********************/
+
+footer{
+	border-top:3px solid #fe6500;
+	width:100%;
+	float:left;
+	}
+.upper-footer{
+	width:100%;
+	float:left;
+	background:#161616;
+	padding:10px 0;
+	}
+.btm-footer{
+	background:#2e2e2e;
+	width:100%;
+	float:left;
+	padding:10px 0;
+	}
+.banner_section{
+	width:100%;
+	float:left;
+	}
+.go-top{
+	background:#56509f;
+	color:#1b0919;
+	padding:10px 15px 15px;
+	float:right;
+	}
+.go-top:hover{background:#fe6500; color:#fff;}
+ul.social-add li{ float:right; margin-left:8px;}
+ul.social-add li a{width:48px; height:48px; border:1px solid #454545; color:#454545; text-align:center; float:left; line-height:48px; font-size:22px;}
+ul.social-add li a:hover{border:1px solid #fe6500; background:#fe6500; color:#ffffff;}
+.left_footer a{color:#fff;}
+.left_footer a:hover{color:#fe6500; text-decoration:underline;}
+.left_footer{color:#fff; line-height:40px;}
+.btm-footer{color:#cfcfcf;}
+.btm-footer p{margin:10px 0 0 0;}
+
+/******************footer_end********************/
+/******************banner_start**********************/
+.carousel-inner .snap_one{
+	background:url(../Images/banner_02.jpg) no-repeat center top;
+	background-size:100% 100%;
+	}
+
+.carousel-inner .snap_two{
+	background:url(../Images/banner_01.jpg) no-repeat center top;
+	background-size:100% 100%;
+	}
+.carousel-inner .snap_three{
+	background:url(../Images/banner_00.jpg) no-repeat center top;
+	background-size:100% 100%;
+	}
+.carousel-inner .snap_four{
+	background:url(../Images/banner_03.jpg) no-repeat center top;
+	background-size:100% 100%;
+	}
+
+
+.banner_section .carousel-indicators li{
+	border:2px solid #595859;
+	background:#fff;
+	height:16px;
+	width:16px;
+	}
+.banner_section .carousel-indicators .active{
+	border:2px solid #d1156b;
+	background:#fff;
+	}
+
+.banner_content{
+	margin-top:50px;
+	}
+
+.banner_section .banner_content h1{
+	font-size:25px;
+	color:#fff;
+	margin:0 0 25px 0;
+	padding:0;
+	/*text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;*/
+	padding:25px;
+	background:url(../Images/banner_trans.png) repeat 0 0;
+	font-style:italic;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	line-height:30px;
+	}
+.banner_section .banner_content h1 span{font-weight:bold; color:#a0094f;}
+.banner_section .banner_content p{
+	font-size:20px;
+	color:#222222;
+	margin-bottom:30px;
+	}
+
+a.register{
+	background:#f7b847;
+	border:1px solid #d98c01;
+	padding:15px 30px;
+	font-size:22px;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+	border-radius:6px;
+	margin:0 0 0 10px;
+	}
+a.register:hover{
+	background:#d98c01;
+	color:#fff;
+	text-decoration:none;
+	}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next{
+	background:#2d2d2d;
+	width:45px!important;
+	height:50px!important;
+	line-height:47px!important;
+	font-size:16px!important;
+	border-radius:4px;
+	}
+	
+/******************banner_end**********************/
+a.book_now{
+	background:#4fb8ed;
+	border:1px solid #0f8ece;
+	padding:15px 30px;
+	font-size:22px;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+	border-radius:6px;
+	}
+a.book_now:hover{
+	background:#0f8ece;
+	color:#fff;
+	text-decoration:none;
+	}
+/****************wrapper_start*****************/
+.wrapper{
+	width:100%;
+	float:left;
+	padding-bottom:30px;
+	}
+
+
+.home_wrap{
+	width:100%;
+	float:left;
+	margin:0px 0 25px;
+	}
+ul.study_wrap{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	}
+ul.study_wrap li{
+	width:100%;
+	float:left;
+	border-bottom:2px dashed #aeadab;
+	}
+ul.study_wrap li a{
+	display:block;
+	width:100%;
+	float:left;
+	padding:10px;
+	}
+ul.study_wrap li a:hover{
+	background:#effbfe;
+	}
+ul.study_wrap li .org_icon{
+	width:60px;
+	height:60px;
+	background:#fe6500;
+	border-radius:50%;
+	text-align:center;
+	padding-top:18px;
+	float:left;
+	margin-right:10px;
+	}
+.org_right{
+	width:85%;
+	float:left;
+	}
+.org_right h2{
+	color:#56509f;
+	margin:0;
+	padding:0;
+	font-size:25px;
+	}
+.org_right h2 span{color:#fe6500; font-style:italic;}
+.org_right p{
+	color:#828282;
+	margin:5px 0 0 0;
+	padding:0;
+	font-size:16px;
+	}
+h1.main_title{
+	font-size:45px;
+	margin:10px 0;
+	padding:0 0 0 0;
+	font-family:league_gothicregular;
+	color:#56509f;
+	text-transform:uppercase;
+	}
+h1.main_title span{color:#fe6500;}
+
+.edu_bg img{width:100%;}
+
+/*****************About_us********************/
+.about_banner{margin:0 0 40px 0}
+.about_banner img{width:100%;}
+.about_wrap{
+	width:100%;
+	float:left;
+	margin:0 0 25px;
+	}
+.about_hindi{
+	padding:10px;
+	background:#fff1de;
+	border-radius:4px;
+	border:1px solid #ffd49a;
+	}
+.about-inner-wrap{
+	width:100%;
+	float:left;
+	border-bottom:2px dashed #aeadab;
+	padding-bottom:15px;
+	margin-bottom:15px;
+	}
+h5.contact-title{
+	font-size:22px;
+	font-weight:bold;
+	}
+h1.all-title{
+	
+	}
+h1.all-title span{color:#4fb8ed;}
+ul.contact-list{
+	width:100%;
+	float:left;
+	}
+ul.contact-list li{
+	width:100%;
+	float:left;
+	margin-bottom:10px;
+	}
+ul.contact-list li label{width:100%; float:left; margin-bottom:4px;}
+.btm-contact .message{font-size:16px;}
+.contact-form .study_wrap li{padding:18px 0;}
+.contact-form .study_wrap li:last-child{border:none;}
+
+/*************chart***************/
+.chart h1{
+	font-family:league_gothicregular;
+	text-align:center;
+	color:#fff;
+	}
+.chart th{
+	background:#56509f;
+	}
+.chart td{
+	text-align:center;
+	}
+.chart .danger span{color:#ff0000; font-weight:bold;}
+.chart .org_bg{
+	background:#fe6500!important;
+	font-weight:bold;
+	color:#fff;
+	font-size:16px;
+	}
+.service_snap img{width:100%;}
+.service_snap{
+	margin:240px 0 0 0;
+	}
+.offer_snap{position:relative;}
+.offers_snapper{
+	position:absolute;
+	left:-25px;
+	top:25px;
+	}
+
+.offer_snap .inner_offer{
+	width:95%;
+	border:4px solid #fe6500;
+	}
+.offers{
+	margin-bottom:20px;
+	border-bottom:2px dashed #aeadab;
+	padding-bottom:20px;
+	}
+h2.offer-title {
+    color: #56509f;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+p.offer_text {
+    color: #828282;
+    font-size: 16px;
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+.modal-content{
+	border:5px solid #fe6500!important;
+	}
+.login .form-control{
+	border-radius:0px;
+	}
+.login label{
+	font-size:16px;
+	text-transform:uppercase;
+	}
+h3.modal-title{ color:#56509f; font-family:league_gothicregular; font-size:40px;}
+.modal-header .close{
+	opacity:0.9;
+	color:#fff;
+	text-shadow:none;
+	background:#000;
+	border-radius:50%;
+	font-size:25px;
+	height:55px;
+	width:55px;
+	position:absolute;
+	right:-25px;
+	border:5px solid #fe6500;
+	top:-20px;
+	}
+.close:hover, .close:focus{
+	color:#fff !important;
+	opacity:0.6 !important;
+	}
+
+/*****************container********************/
+.md_snap img{width:100%; padding:5px; border:1px solid #c5c5c4;}
+.about_hindi h2{
+	margin:0px;
+	padding:0px;
+	font-family:league_gothicregular; 
+	}
+.about_hindi h2 span{font-style:italic; font-family:Arial, Helvetica, sans-serif; font-size:20px;}
+.pro_partner .col-sm-3{
+	border-left:1px solid #c5c5c4;
+	}
+.pro_partner .col-sm-3 img{
+	width:100%;
+	border:1px solid #c5c5c4;
+	padding:5px;
+	}
+.pro_partner h3{
+	margin:10px 0 0 0;
+	padding:0px;
+	font-family:league_gothicregular; 
+	}
+.pro_partner h3 span{
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+.pro_partner h5{
+	margin:5px 0;
+	color: #56509f;
+	font-weight:bold;
+	font-size:12px;
+	}

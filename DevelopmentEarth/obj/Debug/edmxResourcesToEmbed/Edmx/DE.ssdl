@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="developmentEarthModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="developmentEarthModelStoreContainer">
+    <EntitySet Name="AgentRegistration" EntityType="developmentEarthModel.Store.AgentRegistration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AppUser" EntityType="developmentEarthModel.Store.AppUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AppUserLog" EntityType="developmentEarthModel.Store.AppUserLog" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProofType" EntityType="developmentEarthModel.Store.ProofType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Referral" EntityType="developmentEarthModel.Store.Referral" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subject" EntityType="developmentEarthModel.Store.Subject" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transaction" EntityType="developmentEarthModel.Store.Transaction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransactionDetail" EntityType="developmentEarthModel.Store.TransactionDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TransactionType" EntityType="developmentEarthModel.Store.TransactionType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSubject" EntityType="developmentEarthModel.Store.UserSubject" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AgentRegistration_AppUser" Association="developmentEarthModel.Store.FK_AgentRegistration_AppUser">
+      <End Role="AppUser" EntitySet="AppUser" />
+      <End Role="AgentRegistration" EntitySet="AgentRegistration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AgentRegistration_ProofType" Association="developmentEarthModel.Store.FK_AgentRegistration_ProofType">
+      <End Role="ProofType" EntitySet="ProofType" />
+      <End Role="AgentRegistration" EntitySet="AgentRegistration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AppUserLog_AppUser" Association="developmentEarthModel.Store.FK_AppUserLog_AppUser">
+      <End Role="AppUser" EntitySet="AppUser" />
+      <End Role="AppUserLog" EntitySet="AppUserLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Refferal_AppUser" Association="developmentEarthModel.Store.FK_Refferal_AppUser">
+      <End Role="AppUser" EntitySet="AppUser" />
+      <End Role="Referral" EntitySet="Referral" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_AppUser" Association="developmentEarthModel.Store.FK_Transaction_AppUser">
+      <End Role="AppUser" EntitySet="AppUser" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransactionDetail_AppUser" Association="developmentEarthModel.Store.FK_TransactionDetail_AppUser">
+      <End Role="AppUser" EntitySet="AppUser" />
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TransactionDetail_TransactionType" Association="developmentEarthModel.Store.FK_TransactionDetail_TransactionType">
+      <End Role="TransactionType" EntitySet="TransactionType" />
+      <End Role="TransactionDetail" EntitySet="TransactionDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSubject_Subject" Association="developmentEarthModel.Store.FK_UserSubject_Subject">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="UserSubject" EntitySet="UserSubject" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSubject_User" Association="developmentEarthModel.Store.FK_UserSubject_User">
+      <End Role="AppUser" EntitySet="AppUser" />
+      <End Role="UserSubject" EntitySet="UserSubject" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AgentRegistration">
+    <Key>
+      <PropertyRef Name="AgentRegistrationId" />
+    </Key>
+    <Property Name="AgentRegistrationId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="AgentId" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProofTypeId" Type="bigint" Nullable="false" />
+    <Property Name="ProofIDNumber" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="NumberoRefferal" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AppUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MobileNo" Type="bigint" Nullable="false" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Pincode" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="AgentId" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AppUserLog">
+    <Key>
+      <PropertyRef Name="UserLogId" />
+    </Key>
+    <Property Name="UserLogId" Type="bigint" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="LastLogInDatetime" Type="datetime" Nullable="false" />
+    <Property Name="LastLogoutDatetime" Type="datetime" />
+    <Property Name="UserAgent" Type="varchar" MaxLength="50" />
+    <Property Name="UserLoggedInIP" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ProofType">
+    <Key>
+      <PropertyRef Name="ProofTypeId" />
+    </Key>
+    <Property Name="ProofTypeId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProofType" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Referral">
+    <Key>
+      <PropertyRef Name="ReferralId" />
+    </Key>
+    <Property Name="ReferralId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ReferralUserId" Type="bigint" Nullable="false" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="SubjectID" />
+    </Key>
+    <Property Name="SubjectID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubjectName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="Transactionid" />
+    </Key>
+    <Property Name="Transactionid" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="TransactionAmount" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="Isactive" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TransactionDetail">
+    <Key>
+      <PropertyRef Name="TransactionDetailId" />
+    </Key>
+    <Property Name="TransactionDetailId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="ReferredUserid" Type="bigint" Nullable="false" />
+    <Property Name="TransactionTypeId" Type="bigint" Nullable="false" />
+    <Property Name="TransactionAmount" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TransactionType">
+    <Key>
+      <PropertyRef Name="TransactionTypeId" />
+    </Key>
+    <Property Name="TransactionTypeId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransaactionType" Type="varchar" MaxLength="50" />
+    <Property Name="TransactionAmount" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="DeletedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedBy" Type="bigint" />
+  </EntityType>
+  <EntityType Name="UserSubject">
+    <Key>
+      <PropertyRef Name="UserSubjectId" />
+    </Key>
+    <Property Name="UserSubjectId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="bigint" Nullable="false" />
+    <Property Name="SubjectId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AgentRegistration_AppUser">
+    <End Role="AppUser" Type="developmentEarthModel.Store.AppUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AgentRegistration" Type="developmentEarthModel.Store.AgentRegistration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="AgentRegistration">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AgentRegistration_ProofType">
+    <End Role="ProofType" Type="developmentEarthModel.Store.ProofType" Multiplicity="1" />
+    <End Role="AgentRegistration" Type="developmentEarthModel.Store.AgentRegistration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProofType">
+        <PropertyRef Name="ProofTypeId" />
+      </Principal>
+      <Dependent Role="AgentRegistration">
+        <PropertyRef Name="ProofTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AppUserLog_AppUser">
+    <End Role="AppUser" Type="developmentEarthModel.Store.AppUser" Multiplicity="1" />
+    <End Role="AppUserLog" Type="developmentEarthModel.Store.AppUserLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="AppUserLog">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Refferal_AppUser">
+    <End Role="AppUser" Type="developmentEarthModel.Store.AppUser" Multiplicity="1" />
+    <End Role="Referral" Type="developmentEarthModel.Store.Referral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Referral">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_AppUser">
+    <End Role="AppUser" Type="developmentEarthModel.Store.AppUser" Multiplicity="1" />
+    <End Role="Transaction" Type="developmentEarthModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransactionDetail_AppUser">
+    <End Role="AppUser" Type="developmentEarthModel.Store.AppUser" Multiplicity="1" />
+    <End Role="TransactionDetail" Type="developmentEarthModel.Store.TransactionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="TransactionDetail">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TransactionDetail_TransactionType">
+    <End Role="TransactionType" Type="developmentEarthModel.Store.TransactionType" Multiplicity="1" />
+    <End Role="TransactionDetail" Type="developmentEarthModel.Store.TransactionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TransactionType">
+        <PropertyRef Name="TransactionTypeId" />
+      </Principal>
+      <Dependent Role="TransactionDetail">
+        <PropertyRef Name="TransactionTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSubject_Subject">
+    <End Role="Subject" Type="developmentEarthModel.Store.Subject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserSubject" Type="developmentEarthModel.Store.UserSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SubjectID" />
+      </Principal>
+      <Dependent Role="UserSubject">
+        <PropertyRef Name="SubjectId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSubject_User">
+    <End Role="AppUser" Type="developmentEarthModel.Store.AppUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserSubject" Type="developmentEarthModel.Store.UserSubject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AppUser">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserSubject">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

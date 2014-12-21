@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e707f2fe733e4e8686942f8ccaf986c6" Name="Diagram1">
+        <EntityTypeShape EntityType="developmentEarthModel.AgentRegistration" Width="2.25" PointX="7.25" PointY="3.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.AppUserLog" Width="1.5" PointX="6.75" PointY="2.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.ProofType" Width="1.5" PointX="7.25" PointY="3.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.Referral" Width="1.5" PointX="2.5" PointY="2.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.Subject" Width="1.5" PointX="4.75" PointY="3.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.Transaction" Width="1.5" PointX="4.75" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.TransactionDetail" Width="2" PointX="6.75" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.TransactionType" Width="1.875" PointX="9.375" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.UserSubject" Width="1.5" PointX="4.75" PointY="3.125" IsExpanded="false" />
+        <AssociationConnector Association="developmentEarthModel.FK_AgentRegistration_ProofType" ManuallyRouted="false" />
+        <AssociationConnector Association="developmentEarthModel.FK_UserSubject_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="developmentEarthModel.FK_TransactionDetail_TransactionType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="developmentEarthModel.AppUser" Width="1.5" PointX="4.75" PointY="1.5" IsExpanded="false" />
+        <AssociationConnector Association="developmentEarthModel.FK_AgentRegistration_AppUser" />
+        <AssociationConnector Association="developmentEarthModel.FK_AppUserLog_AppUser" />
+        <AssociationConnector Association="developmentEarthModel.FK_Refferal_AppUser" />
+        <AssociationConnector Association="developmentEarthModel.FK_Transaction_AppUser" />
+        <AssociationConnector Association="developmentEarthModel.FK_TransactionDetail_AppUser" />
+        <AssociationConnector Association="developmentEarthModel.FK_UserSubject_User" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
